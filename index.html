@@ -14,7 +14,6 @@
     --gris: #1e1e1e;
     --gris-claro: #2e2e2e;
     --texto-suave: #888;
-    --API: 'https://script.googleusercontent.com/macros/echo?user_content_key=AWDtjMUPDMdqcvD2vAVP9UigF1qQq2T4Wt51x7XzEXxq4A8Q7n-FP2_w-jSf7rjfUexZOPqAy5Bsm0wx-npOSkULqzpFAp-tJPFjWCMh9MdduNvDiNocMjvylfktw8TtEeAIRr4qKDYDOy41Yxik-tP4Ni1bKUFOqrTwOgqD9EDy1bF7tDbweOJzkq_BJ_C7ZPWGBZ2tD1uWboaS69tQqMHWVLzTSyye8ZzW3X7V_ZpAEK4qxhziL2B4ql2Q4so2OM0m5xiNSrfXpQQ5pC29KuV46RG8z5pk4XNuEqM5GplLSE-rbEGwwucS904twbru1gpXPET6AZfIinzujvgM5UO2lInmHbLdJA&lib=MVOf5PAm53DZ32kLWngCCJ_NbcRDRb7mJ';
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,7 +25,6 @@
     min-height: 100vh;
   }
 
-  /* LOGIN */
   #login-screen {
     min-height: 100vh;
     display: flex;
@@ -34,7 +32,6 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background: var(--negro);
   }
 
   .logo {
@@ -121,7 +118,6 @@
     display: none;
   }
 
-  /* APP SHELL */
   #app { display: none; min-height: 100vh; }
 
   header {
@@ -135,16 +131,8 @@
 
   header .logo { font-size: 1.8rem; margin: 0; }
 
-  .user-info {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-
-  .user-name {
-    font-size: 0.85rem;
-    color: var(--texto-suave);
-  }
+  .user-info { display: flex; align-items: center; gap: 0.8rem; }
+  .user-name { font-size: 0.85rem; color: var(--texto-suave); }
 
   .logout-btn {
     background: none;
@@ -162,7 +150,6 @@
 
   main { padding: 1.5rem; max-width: 600px; margin: 0 auto; }
 
-  /* TABS */
   .tabs {
     display: flex;
     gap: 0.5rem;
@@ -186,12 +173,8 @@
     transition: all 0.2s;
   }
 
-  .tab.active {
-    background: var(--rojo);
-    color: var(--blanco);
-  }
+  .tab.active { background: var(--rojo); color: var(--blanco); }
 
-  /* CARDS */
   .card {
     background: var(--gris);
     border-radius: 12px;
@@ -217,7 +200,6 @@
 
   .card-value.rojo { color: var(--rojo); }
 
-  /* PROGRESS BAR */
   .progress-wrap {
     background: var(--negro);
     border-radius: 100px;
@@ -241,7 +223,6 @@
     margin-top: 0.4rem;
   }
 
-  /* STATS GRID */
   .stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -257,20 +238,9 @@
     text-align: center;
   }
 
-  .stat-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    color: var(--blanco);
-  }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--blanco); }
+  .stat-label { font-size: 0.7rem; color: var(--texto-suave); letter-spacing: 1px; text-transform: uppercase; }
 
-  .stat-label {
-    font-size: 0.7rem;
-    color: var(--texto-suave);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  /* CLASE ITEM */
   .clase-item {
     background: var(--gris);
     border-radius: 10px;
@@ -284,17 +254,8 @@
   }
 
   .clase-item:hover { border-color: #555; }
-
-  .clase-info h3 {
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 0.2rem;
-  }
-
-  .clase-info p {
-    font-size: 0.75rem;
-    color: var(--texto-suave);
-  }
+  .clase-info h3 { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.2rem; }
+  .clase-info p { font-size: 0.75rem; color: var(--texto-suave); }
 
   .btn-small {
     background: var(--rojo);
@@ -313,7 +274,6 @@
   .btn-small:hover { background: var(--rojo-oscuro); }
   .btn-small.inscrito { background: #2d5a27; color: #7bc67a; cursor: default; }
 
-  /* ALUMNO ROW (para profesor) */
   .alumno-row {
     display: flex;
     align-items: center;
@@ -323,7 +283,6 @@
   }
 
   .alumno-row:last-child { border-bottom: none; }
-
   .alumno-nombre { font-size: 0.95rem; }
 
   .check-btn {
@@ -341,19 +300,9 @@
     justify-content: center;
   }
 
-  .check-btn.presente {
-    background: #2d5a27;
-    border-color: #7bc67a;
-    color: #7bc67a;
-  }
+  .check-btn.presente { background: #2d5a27; border-color: #7bc67a; color: #7bc67a; }
+  .check-btn.ausente { background: #5a2727; border-color: #c67a7a; color: #c67a7a; }
 
-  .check-btn.ausente {
-    background: #5a2727;
-    border-color: #c67a7a;
-    color: #c67a7a;
-  }
-
-  /* SECTION TITLE */
   .section-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
@@ -363,7 +312,6 @@
     text-transform: uppercase;
   }
 
-  /* SELECT */
   select {
     width: 100%;
     background: var(--negro);
@@ -380,22 +328,6 @@
 
   select:focus { border-color: var(--rojo); }
 
-  /* BADGE */
-  .badge {
-    display: inline-block;
-    background: var(--rojo);
-    color: var(--blanco);
-    font-size: 0.65rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 0.2rem 0.6rem;
-    border-radius: 100px;
-    font-weight: 500;
-  }
-
-  .badge.verde { background: #2d5a27; color: #7bc67a; }
-
-  /* LOADING */
   .loading {
     text-align: center;
     color: var(--texto-suave);
@@ -407,7 +339,6 @@
 
   .hidden { display: none !important; }
 
-  /* ALERT */
   .alert {
     background: #1a3a1a;
     border: 1px solid #2d5a27;
@@ -419,11 +350,7 @@
     display: none;
   }
 
-  .alert.error {
-    background: #3a1a1a;
-    border-color: #5a2727;
-    color: #c67a7a;
-  }
+  .alert.error { background: #3a1a1a; border-color: #5a2727; color: #c67a7a; }
 </style>
 </head>
 <body>
@@ -465,7 +392,6 @@
     <div id="vista-alumno" class="hidden">
       <div class="alert" id="alert-alumno"></div>
 
-      <!-- Dashboard progreso -->
       <div class="card" id="card-progreso">
         <div class="card-label">Progreso hacia siguiente grado</div>
         <div class="card-value rojo" id="alumno-grado">—</div>
@@ -489,7 +415,6 @@
         </div>
       </div>
 
-      <!-- Clases disponibles -->
       <div class="section-title">Próximas Clases</div>
       <div id="lista-clases-alumno"><div class="loading">Cargando...</div></div>
     </div>
@@ -497,11 +422,10 @@
     <!-- VISTA PROFESOR -->
     <div id="vista-profesor" class="hidden">
       <div class="tabs">
-        <button class="tab active" onclick="tabProfesor('asistencia')">Asistencia</button>
-        <button class="tab" onclick="tabProfesor('alumnos')">Alumnos</button>
+        <button class="tab active" onclick="tabProfesor('asistencia', this)">Asistencia</button>
+        <button class="tab" onclick="tabProfesor('alumnos', this)">Alumnos</button>
       </div>
 
-      <!-- Tab asistencia -->
       <div id="tab-asistencia">
         <div class="section-title">Seleccionar Clase</div>
         <select id="select-clase" onchange="cargarInscritos()">
@@ -509,7 +433,6 @@
         </select>
 
         <div class="alert" id="alert-profesor"></div>
-
         <div id="lista-inscritos"></div>
 
         <div id="agregar-alumno-wrap" class="hidden">
@@ -521,7 +444,6 @@
         </div>
       </div>
 
-      <!-- Tab alumnos -->
       <div id="tab-alumnos" class="hidden">
         <div class="section-title">Todos los Alumnos</div>
         <div id="lista-todos-alumnos"><div class="loading">Cargando...</div></div>
@@ -530,14 +452,70 @@
   </main>
 </div>
 
+<!-- iframe oculto para POSTs sin CORS -->
+<iframe id="post-frame" name="post-frame" style="display:none"></iframe>
+<form id="post-form" method="POST" target="post-frame" style="display:none">
+  <input type="hidden" id="form-data" name="data" />
+</form>
+
 <script>
-const API = 'TU_URL_AQUI';
-const PASS_PROFESOR = 'magakrav'; // Cambia esto
+// =====================================================
+// CONFIGURACIÓN — SOLO CAMBIA ESTA URL
+// =====================================================
+const API = 'https://script.google.com/macros/s/AKfycbytFdV_xwcDd0ZFWYP9yFxykmFRM-9lfMYWK5LjcD122yViPvnU973Ordr5aGc3w8EH/exec';
+const PASS_PROFESOR = '1234';
+// =====================================================
 
 let currentUser = null;
 let clases = [];
 let todosAlumnos = [];
 let inscritosClase = [];
+let cbCounter = 0;
+
+// =================== JSONP ===================
+// Usamos JSONP para todos los GETs y evitamos CORS
+
+function jsonp(url) {
+  return new Promise((resolve, reject) => {
+    const cbName = '__cb' + (cbCounter++);
+    window[cbName] = function(data) {
+      resolve(data);
+      delete window[cbName];
+      document.getElementById(cbName) && document.getElementById(cbName).remove();
+    };
+    const script = document.createElement('script');
+    script.id = cbName;
+    script.src = url + (url.includes('?') ? '&' : '?') + 'callback=' + cbName;
+    script.onerror = () => {
+      reject(new Error('JSONP error'));
+      delete window[cbName];
+      script.remove();
+    };
+    document.head.appendChild(script);
+    // Timeout de seguridad
+    setTimeout(() => {
+      if (window[cbName]) {
+        reject(new Error('JSONP timeout'));
+        delete window[cbName];
+        script.remove();
+      }
+    }, 10000);
+  });
+}
+
+// =================== POST via form (no-CORS workaround) ===================
+// Google Apps Script acepta POSTs pero no devuelve respuesta utilizable
+// desde páginas externas. Usamos un iframe oculto — el POST se envía,
+// no leemos la respuesta pero el servidor la procesa igual.
+
+function postData(payload) {
+  const form = document.getElementById('post-form');
+  document.getElementById('form-data').value = JSON.stringify(payload);
+  form.action = API;
+  form.submit();
+  // Pequeño delay para que el iframe procese
+  return new Promise(resolve => setTimeout(resolve, 800));
+}
 
 // =================== LOGIN ===================
 
@@ -558,10 +536,10 @@ async function loginAlumno() {
   const btn = document.querySelector('#box-alumno .btn');
   btn.textContent = 'Buscando...';
   btn.disabled = true;
+  document.getElementById('error-alumno').style.display = 'none';
 
   try {
-    const res = await fetch(`${API}?action=getAlumno&email=${encodeURIComponent(email)}`);
-    const data = await res.json();
+    const data = await jsonp(`${API}?action=getAlumno&email=${encodeURIComponent(email)}`);
 
     if (data.error) {
       document.getElementById('error-alumno').style.display = 'block';
@@ -573,7 +551,8 @@ async function loginAlumno() {
     currentUser = { ...data, email, rol: 'alumno' };
     mostrarApp();
   } catch(e) {
-    alert('Error de conexión');
+    document.getElementById('error-alumno').textContent = 'Error de conexión';
+    document.getElementById('error-alumno').style.display = 'block';
     btn.textContent = 'Entrar';
     btn.disabled = false;
   }
@@ -581,6 +560,7 @@ async function loginAlumno() {
 
 function loginProfesor() {
   const pass = document.getElementById('pass-input').value;
+  document.getElementById('error-profesor').style.display = 'none';
   if (pass === PASS_PROFESOR) {
     currentUser = { nombre: 'Profesor', rol: 'profesor' };
     mostrarApp();
@@ -591,10 +571,14 @@ function loginProfesor() {
 
 function logout() {
   currentUser = null;
+  clases = [];
+  todosAlumnos = [];
   document.getElementById('app').style.display = 'none';
   document.getElementById('login-screen').style.display = 'flex';
   document.getElementById('email-input').value = '';
   document.getElementById('pass-input').value = '';
+  document.getElementById('lista-inscritos').innerHTML = '';
+  document.getElementById('select-clase').innerHTML = '<option value="">— Elige una clase —</option>';
 }
 
 // =================== APP ===================
@@ -604,7 +588,11 @@ async function mostrarApp() {
   document.getElementById('app').style.display = 'block';
   document.getElementById('header-nombre').textContent = currentUser.nombre;
 
-  clases = await fetchClases();
+  try {
+    clases = await fetchClases();
+  } catch(e) {
+    clases = [];
+  }
 
   if (currentUser.rol === 'alumno') {
     document.getElementById('vista-alumno').classList.remove('hidden');
@@ -623,34 +611,38 @@ async function mostrarApp() {
 
 function renderDashboardAlumno() {
   const u = currentUser;
-  const pct = Math.round((u.asistidas / u.requeridas) * 100);
+  const requeridas = u.requeridas || 1;
+  const pct = Math.min(100, Math.round((u.asistidas / requeridas) * 100));
 
-  document.getElementById('alumno-grado').textContent = u.grado.toUpperCase();
+  document.getElementById('alumno-grado').textContent = (u.grado || '—').toUpperCase();
   document.getElementById('progress-bar').style.width = pct + '%';
   document.getElementById('prog-asistidas').textContent = u.asistidas + ' clases';
   document.getElementById('prog-restantes').textContent = 'faltan ' + u.restantes;
   document.getElementById('stat-asistidas').textContent = u.asistidas;
   document.getElementById('stat-restantes').textContent = u.restantes;
 
-  // Mensaje motivacional
   if (u.restantes <= 5) {
     showAlert('alert-alumno', '🔥 ¡Casi listo para el siguiente grado!', false);
-  } else if (u.restantes > 30) {
-    showAlert('alert-alumno', '💪 ¡Sigue así! Cada clase cuenta.', false);
   }
 }
 
 function renderClasesAlumno() {
   const container = document.getElementById('lista-clases-alumno');
-  if (!clases.length) { container.innerHTML = '<div class="loading">Sin clases disponibles</div>'; return; }
+  if (!clases.length) {
+    container.innerHTML = '<div class="loading">Sin clases disponibles</div>';
+    return;
+  }
 
   container.innerHTML = clases.map(c => {
-    const fecha = new Date(c.fecha).toLocaleDateString('es-CL', {weekday:'short', day:'numeric', month:'short'});
+    let fechaStr = '—';
+    try {
+      fechaStr = new Date(c.fecha).toLocaleDateString('es-CL', {weekday:'short', day:'numeric', month:'short'});
+    } catch(e) { fechaStr = c.fecha; }
     return `
       <div class="clase-item">
         <div class="clase-info">
-          <h3>${c.tipo}</h3>
-          <p>${fecha}</p>
+          <h3>${c.tipo || 'Clase'}</h3>
+          <p>${fechaStr}</p>
         </div>
         <button class="btn-small" id="btn-inscribir-${c.id}" onclick="inscribirse('${c.id}')">Inscribirse</button>
       </div>
@@ -664,15 +656,9 @@ async function inscribirse(claseId) {
   btn.disabled = true;
 
   try {
-    const res = await fetch(API, {
-      method: 'POST',
-      body: JSON.stringify({ action: 'inscribir', alumnoId: currentUser.id, claseId })
-    });
-    const data = await res.json();
-    if (data.ok) {
-      btn.textContent = '✓ Inscrito';
-      btn.classList.add('inscrito');
-    }
+    await postData({ action: 'inscribir', alumnoId: currentUser.id, claseId });
+    btn.textContent = '✓ Inscrito';
+    btn.classList.add('inscrito');
   } catch(e) {
     btn.textContent = 'Error';
     btn.disabled = false;
@@ -681,10 +667,9 @@ async function inscribirse(claseId) {
 
 // =================== PROFESOR ===================
 
-function tabProfesor(tab) {
+function tabProfesor(tab, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  event.target.classList.add('active');
-
+  el.classList.add('active');
   document.getElementById('tab-asistencia').classList.toggle('hidden', tab !== 'asistencia');
   document.getElementById('tab-alumnos').classList.toggle('hidden', tab !== 'alumnos');
 }
@@ -693,8 +678,9 @@ function renderSelectClases() {
   const sel = document.getElementById('select-clase');
   sel.innerHTML = '<option value="">— Elige una clase —</option>';
   clases.forEach(c => {
-    const fecha = new Date(c.fecha).toLocaleDateString('es-CL', {day:'numeric', month:'short'});
-    sel.innerHTML += `<option value="${c.id}">${c.tipo} — ${fecha}</option>`;
+    let fechaStr = '—';
+    try { fechaStr = new Date(c.fecha).toLocaleDateString('es-CL', {day:'numeric', month:'short'}); } catch(e) { fechaStr = c.fecha; }
+    sel.innerHTML += `<option value="${c.id}">${c.tipo || 'Clase'} — ${fechaStr}</option>`;
   });
 }
 
@@ -708,8 +694,7 @@ async function cargarInscritos() {
   container.innerHTML = '<div class="loading">Cargando inscritos...</div>';
 
   try {
-    const res = await fetch(`${API}?action=getInscritos&claseId=${claseId}`);
-    inscritosClase = await res.json();
+    inscritosClase = await jsonp(`${API}?action=getInscritos&claseId=${claseId}`);
 
     if (!inscritosClase.length) {
       container.innerHTML = '<div class="loading">Sin inscritos aún</div>';
@@ -726,7 +711,7 @@ async function cargarInscritos() {
       `;
     }
 
-    // Llenar selector de extras
+    // Extras: alumnos no inscritos
     const selExtra = document.getElementById('select-alumno-extra');
     selExtra.innerHTML = '<option value="">— Elige alumno —</option>';
     todosAlumnos.forEach(a => {
@@ -737,26 +722,23 @@ async function cargarInscritos() {
 
     wrap.classList.remove('hidden');
   } catch(e) {
-    container.innerHTML = '<div class="loading">Error al cargar</div>';
+    container.innerHTML = '<div class="loading">Error al cargar inscritos</div>';
+    showAlert('alert-profesor', 'No se pudieron cargar los inscritos', true);
   }
 }
 
 async function toggleAsistencia(alumnoId, claseId, btn) {
   const yaPresente = btn.classList.contains('presente');
-
   btn.classList.toggle('presente', !yaPresente);
   btn.classList.toggle('ausente', yaPresente);
   btn.textContent = !yaPresente ? '✓' : '✗';
 
   try {
-    await fetch(API, {
-      method: 'POST',
-      body: JSON.stringify({
-        action: 'marcarAsistencia',
-        alumnoId,
-        claseId,
-        asistio: !yaPresente ? 'Y' : 'N'
-      })
+    await postData({
+      action: 'marcarAsistencia',
+      alumnoId,
+      claseId,
+      asistio: !yaPresente ? 'Y' : 'N'
     });
   } catch(e) {
     showAlert('alert-profesor', 'Error al guardar asistencia', true);
@@ -769,36 +751,44 @@ async function agregarExtra() {
   if (!alumnoId || !claseId) return;
 
   try {
-    // Inscribir primero
-    await fetch(API, {
-      method: 'POST',
-      body: JSON.stringify({ action: 'inscribir', alumnoId, claseId })
-    });
-    // Marcar presente
-    await fetch(API, {
-      method: 'POST',
-      body: JSON.stringify({ action: 'marcarAsistencia', alumnoId, claseId, asistio: 'Y' })
-    });
-    showAlert('alert-profesor', 'Alumno agregado y marcado presente', false);
-    cargarInscritos();
+    await postData({ action: 'inscribir', alumnoId, claseId });
+    await postData({ action: 'marcarAsistencia', alumnoId, claseId, asistio: 'Y' });
+    showAlert('alert-profesor', 'Alumno agregado y marcado presente ✓', false);
+    setTimeout(() => cargarInscritos(), 1200); // Esperar que los POSTs procesen
   } catch(e) {
     showAlert('alert-profesor', 'Error al agregar alumno', true);
   }
 }
 
 async function cargarTodosAlumnos() {
-  // Por ahora mostramos los que ya tenemos del Sheet via la API
-  // Necesitarías un endpoint getAlumnos — por ahora placeholder
-  document.getElementById('lista-todos-alumnos').innerHTML = '<div class="loading">Próximamente</div>';
+  const container = document.getElementById('lista-todos-alumnos');
+  try {
+    todosAlumnos = await jsonp(`${API}?action=getAlumnos`);
+    if (!todosAlumnos.length) {
+      container.innerHTML = '<div class="loading">Sin alumnos</div>';
+      return;
+    }
+    container.innerHTML = `
+      <div class="card" style="padding:0.5rem">
+        ${todosAlumnos.map(a => `
+          <div class="alumno-row">
+            <div>
+              <div class="alumno-nombre">${a.nombre}</div>
+              <div style="font-size:0.75rem;color:var(--texto-suave)">${a.grado || '—'} · ${a.asistidas || 0} clases</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  } catch(e) {
+    container.innerHTML = '<div class="loading">Error al cargar alumnos</div>';
+  }
 }
 
 // =================== UTILS ===================
 
 async function fetchClases() {
-  try {
-    const res = await fetch(`${API}?action=getClases`);
-    return await res.json();
-  } catch(e) { return []; }
+  return await jsonp(`${API}?action=getClases`);
 }
 
 function showAlert(id, msg, isError) {
@@ -806,6 +796,7 @@ function showAlert(id, msg, isError) {
   el.textContent = msg;
   el.className = 'alert' + (isError ? ' error' : '');
   el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 4000);
 }
 </script>
 </body>
